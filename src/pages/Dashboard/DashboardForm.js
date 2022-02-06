@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Grid, Stack } from '@mui/material';
 import { Input } from '../../components/controls';
-import { useAppDispatch } from '../../redux/store';
 import { useForm, Form } from '../../components/useForm';
 import { Button } from '../../components/controls';
 import { makeStyles } from '@mui/styles';
@@ -20,7 +19,6 @@ const initialFValues = {
 };
 
 export default function DashboardForm(props) {
-  const dispatch = useAppDispatch();
   const { onUpdate, recordForEdit, setOpenPopup } = props;
   const classes = useStyles();
 
@@ -67,6 +65,7 @@ export default function DashboardForm(props) {
       setValues({
         ...recordForEdit,
       });
+    // eslint-disable-next-line
   }, [recordForEdit]);
 
   return (

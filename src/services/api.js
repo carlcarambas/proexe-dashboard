@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-const BASE_API_URL =
-  'https://my-json-server.typicode.com/karolkproexe/jsonplaceholderdb/data';
 const makeAPIRequest = async (method, endPoint, data) => {
   let result = null;
   try {

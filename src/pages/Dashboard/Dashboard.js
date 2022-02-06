@@ -56,6 +56,7 @@ const headCells = [
 
 export default function Dashboard() {
   const classes = useStyles();
+  // eslint-disable-next-line
   const dispatch = useDispatch();
   const {
     recordsList,
@@ -66,6 +67,7 @@ export default function Dashboard() {
     loading,
   } = useSelector((state) => state.records);
 
+  // eslint-disable-next-line
   const [filterFn, setFilterFn] = useState({
     fn: (items) => {
       return items;
